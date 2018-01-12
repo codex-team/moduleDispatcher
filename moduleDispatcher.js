@@ -4,7 +4,7 @@
  *
  * @copyright CodeX Team <team@ifmo.su>
  * @license MIT https://github.com/codex-team/dispatcher/LICENSE
- * @author @polinashneider http://github.com/polinashneider
+ * @author @polinashneider https://github.com/polinashneider
  *
  * @version 1.0.0
  *
