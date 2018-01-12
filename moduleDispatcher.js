@@ -2,9 +2,9 @@
  * Module Dispatcher
  * Class for Modules initialization
  *
- * @copyright CodeX Team
+ * @copyright CodeX Team <team@ifmo.su>
  * @license MIT https://github.com/codex-team/dispatcher/LICENSE
- * @author @polinashneider
+ * @author @polinashneider http://github.com/polinashneider
  *
  * @version 1.0.0
  *
