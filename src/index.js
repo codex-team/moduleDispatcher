@@ -24,7 +24,6 @@
  * @property {Object|null} settings - Module settings got from <module-settings>
  * @property {Object} moduleClass   - JS class that handles the Module
  */
-
 class Module {
 /**
  * @constructor Dispatcher constructor
