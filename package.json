@@ -1,7 +1,7 @@
 {
   "name": "codex.dispatcher",
   "version": "1.0.0",
-  "description": "CodeX Module Dispatcher",
+  "description": "CodeX Module Dispatcher — Class for Modules initialization",
   "main": "bundle.js",
   "scripts": {
     "build": "webpack --progress  --display-error-details --display-entrypoints --display-reasons"
@@ -25,9 +25,6 @@
     "es2015": "0.0.0",
     "eslint": "^3.12.2",
     "eslint-loader": "^1.6.1",
-    "webpack": "^3.10.0"
-  },
-  "dependencies": {
     "webpack": "^3.10.0"
   }
 }

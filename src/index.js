@@ -5,11 +5,9 @@
  * @copyright CodeX Team <team@ifmo.su>
  * @license MIT https://github.com/codex-team/dispatcher/LICENSE
  * @author @polinashneider https://github.com/polinashneider
- *
  * @version 1.0.0
  *
  * @example
- *
  * new moduleDispatcher({
  *   Library : codex
  * });
@@ -42,7 +40,6 @@ class Module {
     try {
       console.assert(this.moduleClass.init instanceof Function, 'Module «' + this.name + '» should implement init method');
 
-
       if (this.moduleClass.init instanceof Function) {
         this.moduleClass.init(this.settings, this.element);
         console.log(`Module «${this.name}» initialized`);
@@ -64,15 +61,13 @@ class Module {
   }
 }
 
-
-
 /**
  * Class structure
  *
  * @typedef {moduleDispatcher} moduleDispatcher
  * @property {Object} Library    - global object, containing Modules to init
  * @property {Module[]} modules  - list of Modules
-*/
+ */
 export default class moduleDispatcher {
 /**
  * @param {Object|null} settings — settings object, optional
