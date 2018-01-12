@@ -3,7 +3,7 @@
  * Class for Modules initialization
  *
  * @copyright CodeX Team
- * @license MIT https://github.com/codex-team/codex.dispatcher
+ * @license MIT https://github.com/codex-team/dispatcher
  * @author @polinashneider
  *
  * @version 1.0.0
