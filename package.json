@@ -1,23 +1,23 @@
 {
-  "exportModuleName": "dispatcher",
-  "name": "codex.dispatcher",
+  "exportModuleName": "moduleDispatcher",
+  "name": "module-dispatcher",
   "version": "0.0.1",
   "description": "CodeX Module Dispatcher — Class for Modules initialization",
-  "main": "./lib/bundle.js",
+  "main": "./lib/moduleDispatcher.js",
   "scripts": {
     "build": "webpack --progress  --display-error-details --display-entrypoints --display-reasons"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codex-team/codex.dispatcher.git"
+    "url": "git+https://github.com/codex-team/moduleDispatcher.git"
   },
   "author": "@polinashneider https://github.com/polinashneider",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/codex-team/codex.dispatcher/issues"
+    "url": "https://github.com/codex-team/moduleDispatcher/issues"
   },
-  "homepage": "https://github.com/codex-team/codex.dispatcher#readme",
-  "devDependencies": {
+  "homepage": "https://github.com/codex-team/moduleDispatcher#readme",
+  "devDependencies": { 
     "babel-core": "^6.26.0",
     "babel-env": "^2.4.1",
     "babel-loader": "^7.1.0",

@@ -15,7 +15,7 @@ var pkg = require('./package');
 /**
  * Define entry point
  */
-var entry = './src/index.js';
+var entry = './src/moduleDispatcher.js';
 
 /**
  * Set bundle params
