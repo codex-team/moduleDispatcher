@@ -72,6 +72,15 @@ var plugins = [
 
   /** Block biuld if errors found */
   new webpack.NoEmitOnErrorsPlugin(),
+
+  /**
+   * Add comments before output file lib/moduleDispatcher.js
+   * @type {String} — JSDoc comments
+   */
+  new webpack.BannerPlugin({
+    banner: " Module Dispatcher \n Class for Modules initialization \n \n @copyright CodeX Team <team@ifmo.su> \n @license MIT https://github.com/codex-team/dispatcher/LICENSE \n @author @polinashneider https://github.com/polinashneider \n @version 1.0.0"
+  })
+
 ];
 
 /**

@@ -17,12 +17,13 @@
     "url": "https://github.com/codex-team/moduleDispatcher/issues"
   },
   "homepage": "https://github.com/codex-team/moduleDispatcher#readme",
-  "devDependencies": { 
+  "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-env": "^2.4.1",
     "babel-loader": "^7.1.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-2": "^6.24.1",
+    "banner-webpack-plugin": "^0.2.3",
     "eslint": "^3.12.2",
     "eslint-loader": "^1.6.1",
     "webpack": "^3.10.0"
