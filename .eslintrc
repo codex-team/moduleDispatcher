@@ -54,7 +54,7 @@
             "markers": ["=", "!"]
         }],
         "semi": [2, "always"],
-        "indent": [2, 2, {
+        "indent": [2, 4, {
             "SwitchCase": 1,
             "VariableDeclarator": 2
         }],

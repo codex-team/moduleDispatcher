@@ -27,7 +27,7 @@ var entry = './src/index.js';
  *                  It will work with CommonJS, AMD and as global variable.
  */
 var output = {
-  filename: './lib/bundle.js',
+  filename: pkg.main,
   library: pkg.exportModuleName,
   libraryTarget: 'umd',
 };
