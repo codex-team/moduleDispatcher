@@ -2,7 +2,7 @@
   "exportModuleName": "moduleDispatcher",
   "name": "module-dispatcher",
   "version": "0.0.1",
-  "description": "CodeX Module Dispatcher — Class for Modules initialization",
+  "description": "CodeX Module Dispatcher — Initialize frontend Modules from the DOM without inline scripts",
   "copyright": "CodeX Team <team@ifmo.su>",
   "main": "./lib/moduleDispatcher.js",
   "scripts": {

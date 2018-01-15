@@ -18,7 +18,7 @@ var pkg = require('./package');
 var entry = './src/moduleDispatcher.js';
 
 /**
- * @return {String} comment composed from package values
+ * @return {String} Bundle header with Module description
  */
 var bundleComment = require('./bundleComment.js');
 
@@ -96,8 +96,7 @@ var config = {
   output: output,
   module: useModule,
   plugins: plugins,
-  watch: true,
-  devtool: 'source-map'
+  watch: true
 };
 
 module.exports = config;
