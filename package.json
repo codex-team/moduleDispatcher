@@ -3,6 +3,7 @@
   "name": "module-dispatcher",
   "version": "0.0.1",
   "description": "CodeX Module Dispatcher — Class for Modules initialization",
+  "copyright": "CodeX Team <team@ifmo.su>",
   "main": "./lib/moduleDispatcher.js",
   "scripts": {
     "build": "webpack --progress  --display-error-details --display-entrypoints --display-reasons"

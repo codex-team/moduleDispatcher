@@ -18,6 +18,11 @@ var pkg = require('./package');
 var entry = './src/moduleDispatcher.js';
 
 /**
+ * @return {String} comment composed from package values
+ */
+var bundleComment = require('./bundleComment.js');
+
+/**
  * Set bundle params
  *
  * filename       - main bundle file from package.json
@@ -75,10 +80,10 @@ var plugins = [
 
   /**
    * Add comments before output file lib/moduleDispatcher.js
-   * @type {String} — JSDoc comments
+   * @type {String} — bundleComment
    */
   new webpack.BannerPlugin({
-    banner: " Module Dispatcher \n Class for Modules initialization \n \n @copyright CodeX Team <team@ifmo.su> \n @license MIT https://github.com/codex-team/dispatcher/LICENSE \n @author @polinashneider https://github.com/polinashneider \n @version 1.0.0"
+    banner: bundleComment
   })
 
 ];
