@@ -1,28 +1,30 @@
 {
-  "exportModuleName": "dispatcher",
-  "name": "codex.dispatcher",
+  "exportModuleName": "moduleDispatcher",
+  "name": "module-dispatcher",
   "version": "0.0.1",
-  "description": "CodeX Module Dispatcher — Class for Modules initialization",
-  "main": "./lib/bundle.js",
+  "description": "CodeX Module Dispatcher — Initialize frontend Modules from the DOM without inline scripts",
+  "copyright": "CodeX Team <team@ifmo.su>",
+  "main": "./lib/moduleDispatcher.js",
   "scripts": {
     "build": "webpack --progress  --display-error-details --display-entrypoints --display-reasons"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codex-team/codex.dispatcher.git"
+    "url": "git+https://github.com/codex-team/moduleDispatcher.git"
   },
   "author": "@polinashneider https://github.com/polinashneider",
-  "license": "MIT",
+  "license": "MIT https://github.com/codex-team/dispatcher/LICENSE",
   "bugs": {
-    "url": "https://github.com/codex-team/codex.dispatcher/issues"
+    "url": "https://github.com/codex-team/moduleDispatcher/issues"
   },
-  "homepage": "https://github.com/codex-team/codex.dispatcher#readme",
+  "homepage": "https://github.com/codex-team/moduleDispatcher#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-env": "^2.4.1",
     "babel-loader": "^7.1.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-2": "^6.24.1",
+    "banner-webpack-plugin": "^0.2.3",
     "eslint": "^3.12.2",
     "eslint-loader": "^1.6.1",
     "webpack": "^3.10.0"

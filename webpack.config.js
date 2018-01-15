@@ -15,7 +15,12 @@ var pkg = require('./package');
 /**
  * Define entry point
  */
-var entry = './src/index.js';
+var entry = './src/moduleDispatcher.js';
+
+/**
+ * @return {String} Bundle header with Module description
+ */
+var bundleComment = require('./bundleComment.js');
 
 /**
  * Set bundle params
@@ -72,6 +77,15 @@ var plugins = [
 
   /** Block biuld if errors found */
   new webpack.NoEmitOnErrorsPlugin(),
+
+  /**
+   * Add comments before output file lib/moduleDispatcher.js
+   * @type {String} — bundleComment
+   */
+  new webpack.BannerPlugin({
+    banner: bundleComment
+  })
+
 ];
 
 /**
@@ -82,8 +96,7 @@ var config = {
   output: output,
   module: useModule,
   plugins: plugins,
-  watch: true,
-  devtool: 'source-map'
+  watch: true
 };
 
 module.exports = config;
