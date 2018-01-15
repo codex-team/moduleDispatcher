@@ -13,7 +13,7 @@
     "url": "git+https://github.com/codex-team/moduleDispatcher.git"
   },
   "author": "@polinashneider https://github.com/polinashneider",
-  "license": "MIT",
+  "license": "MIT https://github.com/codex-team/dispatcher/LICENSE",
   "bugs": {
     "url": "https://github.com/codex-team/moduleDispatcher/issues"
   },
