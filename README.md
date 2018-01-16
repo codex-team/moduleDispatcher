@@ -25,9 +25,8 @@ new moduleDispatcher({
 });
 ```
 If you don't specify Library, your Modules will be called as `window.moduleOne` by default.
-
+### Add Modules to DOM
 Add attribute ```data-module="yourModuleName"``` to the HTML Element of the Module you want to init.
-### Example
 ```html
 <div data-module="comments"></div>
 ```
@@ -37,7 +36,7 @@ You can init multiple Modules on one node as well
 ```
 
 ## Passing settings to the Modules
-If your Module has settings, place them **inside** the Node with data-module.
+If your Module has settings, place them via JSON **inside** the Node with data-module.
 
 Don't forget to add an attribute `hidden` to the `<module-settings>` tag
 ```html
@@ -47,18 +46,7 @@ Don't forget to add an attribute `hidden` to the `<module-settings>` tag
 		     // your module's settings
 		 }
 	</module-settings>
-</div>
-```
-Put your Module settings in JSON format
-```html
-<div data-module="comments">
-	<module-settings hidden>
-		 {
-		     "key1" : "value1",
-		     "key2" : "value2",
-		     ...
-		 }
-	</module-settings>
+	<!-- Other stuff -->
 </div>
 ```
 For several Modules on one node, your settings should be an Array
@@ -77,3 +65,16 @@ For several Modules on one node, your settings should be an Array
 	</module-settings>
 </div>
 ```
+## Issues and improvements
+
+Ask a question or report a bug on the [create issue page](https://github.com/codex-team/moduleDispatcher/issues/new).
+
+Know how to improve moduleDispatcher? [Fork it](https://github.com/codex-team/moduleDispatcher) and send pull request.
+
+You can also drop a few lines to [CodeX Team's email](mailto:team@ifmo.su).
+
+## License
+
+MIT
+
+Copyright (c) 2018 [CodeX Team](https://ifmo.su) <team@ifmo.su>
