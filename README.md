@@ -95,4 +95,4 @@ Copyright (c) 2018 CodeX Team <team@ifmo.su>
 
 CodeX is a new team based in ITMO University, unifying students and graduates interested in web-development, design and studying new technologies in practice.
 
-Our site: http://ifmo.su
+[https://ifmo.su](https://ifmo.su) 
