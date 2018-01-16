@@ -2,34 +2,32 @@
 CodeX Module Dispatcher
 
 Class for frontend Modules initialization from the DOM without inline scripts
-
+## Installation
 Install npm package
 ```
-npm i codex.dispatcher
+npm i module-dispatcher
 ```
-Require it in your JavaScript file
+## Usage
+Import it in your JavaScript file
 ```js
-const dispatcher = require('codex.dispatcher');
+import moduleDispatcher from 'module-dispatcher';
 ```
-## Create instance of dispatcher
-```js
-new dispatcher();
-```
-If your javascript Modules are parts of one global Library object, like
+### Create an instance of Dispatcher
+If your JavaScript Modules are parts of one global Library object, like
 
 - YourLibrary.moduleOne
 - YourLibrary.moduleTwo
 - YourLibrary.moduleThree
 
-You can instantiate dispatcher the following way
+You can instantiate Dispatcher by the following way
 ```js
-new dispatcher({
+new moduleDispatcher({
     Library : YourLibrary
 });
 ```
-If you don't specify Library, your Modules will be called as window.moduleOne by default.
+If you don't specify Library, your Modules will be called as ```window.moduleOne``` by default.
 
-## Prepare your Modules settings
+## Passing setting to the Modules
 Add attribute ```data-module="yourModuleName"``` to the HTML Element of the Module you want to init.
 ### Example
 ```html
@@ -41,7 +39,7 @@ You can init multiple Modules on one node as well
 ```
 If your Module has settings, place them <b>inside</b> node with data-module.
 
-Don't forget to add attribute 'hidden' to ```<module-settings>``` tag
+Don't forget to add attribute `hidden` to ```<module-settings>``` tag
 ```html
 <div data-module="comments likes">
 	<module-settings hidden>
