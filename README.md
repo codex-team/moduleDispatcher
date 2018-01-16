@@ -1,11 +1,10 @@
-# codex.dispatcher
-CodeX Module Dispatcher
+# CodeX Module Dispatcher
 
 Class for frontend Modules initialization from the DOM without inline scripts
 ## Installation
 Install npm package
 ```
-npm i module-dispatcher
+npm i module-dispatcher --save
 ```
 ## Usage
 Import it in your JavaScript file
@@ -13,7 +12,7 @@ Import it in your JavaScript file
 import moduleDispatcher from 'module-dispatcher';
 ```
 ### Create an instance of Dispatcher
-If your JavaScript Modules are parts of one global Library object, like
+If your JavaScript Modules are parts of one global `Library` object, like
 
 - YourLibrary.moduleOne
 - YourLibrary.moduleTwo
@@ -25,9 +24,8 @@ new moduleDispatcher({
     Library : YourLibrary
 });
 ```
-If you don't specify Library, your Modules will be called as ```window.moduleOne``` by default.
+If you don't specify Library, your Modules will be called as `window.moduleOne` by default.
 
-## Passing setting to the Modules
 Add attribute ```data-module="yourModuleName"``` to the HTML Element of the Module you want to init.
 ### Example
 ```html
@@ -37,11 +35,13 @@ You can init multiple Modules on one node as well
 ```html
 <div data-module="comments likes"></div>
 ```
-If your Module has settings, place them <b>inside</b> node with data-module.
 
-Don't forget to add attribute `hidden` to ```<module-settings>``` tag
+## Passing settings to the Modules
+If your Module has settings, place them **inside** the Node with data-module.
+
+Don't forget to add an attribute `hidden` to the `<module-settings>` tag
 ```html
-<div data-module="comments likes">
+<div data-module="comments">
 	<module-settings hidden>
 		 {
 		     // your module's settings
@@ -51,7 +51,7 @@ Don't forget to add attribute `hidden` to ```<module-settings>``` tag
 ```
 Put your Module settings in JSON format
 ```html
-<div data-module="comments likes">
+<div data-module="comments">
 	<module-settings hidden>
 		 {
 		     "key1" : "value1",
@@ -63,15 +63,17 @@ Put your Module settings in JSON format
 ```
 For several Modules on one node, your settings should be an Array
 ```html
-<module-settings>
-	[
-		{
-			// Module 1 settings
-		},
-		{
-			// Module 2 settings
-		},
-		...
-	]
-</module-settings>
+<div data-module="module1 module2">
+	<module-settings>
+		[
+			{
+				// Module 1 settings
+			},
+			{
+				// Module 2 settings
+			},
+			...
+		]
+	</module-settings>
+</div>
 ```
