@@ -6,7 +6,7 @@ Class for frontend Modules initialization from the DOM without inline scripts
 
 Install npm package
 ```
-npm i module-dispatcher --save-dev
+npm i module-dispatcher --save
 ```
 
 ## Usage
