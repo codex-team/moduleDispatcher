@@ -63,7 +63,7 @@ Don't forget to add an attribute `hidden` to the `<module-settings>` tag
 For several Modules on one node, your settings should be an Array
 ```html
 <div data-module="module1 module2">
-    <module-settings>
+    <module-settings hidden>
         [
             {
                 // Module 1 settings
