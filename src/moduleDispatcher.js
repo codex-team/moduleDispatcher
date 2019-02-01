@@ -170,7 +170,7 @@ export default class moduleDispatcher {
     *
     * @example
     *
-    * <textarea hidden>
+    * <textarea name="module-settings" hidden>
     *     {
     *         // your module's settings
     *     }
@@ -178,7 +178,7 @@ export default class moduleDispatcher {
     *
     */
     getModuleSettings(element, index, name) {
-        let settingsNodes = element.querySelector('textarea'),
+        let settingsNodes = element.querySelector('textarea[name="module-settings"]'),
                 settingsObject;
 
         if (!settingsNodes) {
@@ -202,7 +202,7 @@ export default class moduleDispatcher {
          *
          * Single module, settings via object
          *
-         * <textarea hidden>
+         * <textarea name="module-settings" hidden>
          *     {
          *         // Comments Module settings
          *     }
@@ -222,7 +222,7 @@ export default class moduleDispatcher {
          *
          * Several modules, settings via array
          *
-         * <textarea hidden>
+         * <textarea name="module-settings" hidden>
          *   [
          *     {
          *         // Module 1 settings

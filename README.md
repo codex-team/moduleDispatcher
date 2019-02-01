@@ -52,7 +52,7 @@ If your Module has settings, place them via JSON **inside** the Node with data-m
 Don't forget to add an attribute `hidden` to the `<textarea>` tag
 ```html
 <div data-module="comments">
-    <textarea hidden>
+    <textarea name="module-settings" hidden>
          {
              // your module's settings
          }
@@ -63,7 +63,7 @@ Don't forget to add an attribute `hidden` to the `<textarea>` tag
 For several Modules on one node, your settings should be an Array
 ```html
 <div data-module="module1 module2">
-    <textarea hidden>
+    <textarea name="module-settings" hidden>
         [
             {
                 // Module 1 settings
@@ -89,10 +89,10 @@ You can also drop a few lines to [CodeX Team's email](mailto:team@ifmo.su).
 
 [MIT](https://github.com/codex-team/dispatcher/LICENSE)
 
-Copyright (c) 2018 CodeX Team <team@ifmo.su>
+Copyright (c) 2018 CodeX Team <team@codex.so>
 
 ## About CodeX Team
 
 CodeX is a new team based in ITMO University, unifying students and graduates interested in web-development, design and studying new technologies in practice.
 
-[https://ifmo.su](https://ifmo.su) 
+[https://codex.so](https://codex.so) 
