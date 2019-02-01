@@ -49,21 +49,21 @@ You can init multiple Modules on one node as well
 
 If your Module has settings, place them via JSON **inside** the Node with data-module.
 
-Don't forget to add an attribute `hidden` to the `<module-settings>` tag
+Don't forget to add an attribute `hidden` to the `<textarea>` tag
 ```html
 <div data-module="comments">
-    <module-settings hidden>
+    <textarea hidden>
          {
              // your module's settings
          }
-    </module-settings>
+    </textarea>
     <!-- Other stuff -->
 </div>
 ```
 For several Modules on one node, your settings should be an Array
 ```html
 <div data-module="module1 module2">
-    <module-settings hidden>
+    <textarea hidden>
         [
             {
                 // Module 1 settings
@@ -73,7 +73,7 @@ For several Modules on one node, your settings should be an Array
             },
             ...
         ]
-    </module-settings>
+    </textarea>
 </div>
 ```
 

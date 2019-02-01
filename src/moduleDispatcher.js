@@ -170,15 +170,15 @@ export default class moduleDispatcher {
     *
     * @example
     *
-    * <module-settings hidden>
+    * <textarea hidden>
     *     {
     *         // your module's settings
     *     }
-    * </module-settings>
+    * </textarea>
     *
     */
     getModuleSettings(element, index, name) {
-        let settingsNodes = element.querySelector('module-settings'),
+        let settingsNodes = element.querySelector('textarea'),
                 settingsObject;
 
         if (!settingsNodes) {
@@ -186,10 +186,10 @@ export default class moduleDispatcher {
         }
 
         try {
-            settingsObject = settingsNodes.textContent.trim();
+            settingsObject = settingsNodes.value.trim();
             settingsObject = JSON.parse(settingsObject);
         } catch(e) {
-            console.warn(`Can not parse Module «${name}» settings bacause of: ` + e);
+            console.warn(`Can not parse Module «${name}» settings because of: ` + e);
             console.groupCollapsed(name + ' settings');
             console.log(settingsObject);
             console.groupEnd();
@@ -202,11 +202,11 @@ export default class moduleDispatcher {
          *
          * Single module, settings via object
          *
-         * <module-settings>
+         * <textarea hidden>
          *     {
          *         // Comments Module settings
          *     }
-         * </module-settings>
+         * </textarea>
          */
         if (!Array.isArray(settingsObject)) {
             if (index === 0) {
@@ -222,7 +222,7 @@ export default class moduleDispatcher {
          *
          * Several modules, settings via array
          *
-         * <module-settings>
+         * <textarea hidden>
          *   [
          *     {
          *         // Module 1 settings
@@ -232,7 +232,7 @@ export default class moduleDispatcher {
          *     },
          *     ...
          *   ]
-         * </module-settings>
+         * </textarea>
          */
         if (settingsObject[index]) {
             return settingsObject[index];
