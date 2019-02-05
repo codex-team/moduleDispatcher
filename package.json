@@ -1,5 +1,5 @@
 {
-  "exportModuleName": "moduleDispatcher",
+  "exportModuleName": "ModuleDispatcher",
   "name": "module-dispatcher",
   "version": "2.0.0",
   "description": "CodeX Module Dispatcher — Initialize frontend Modules from the DOM without inline scripts",

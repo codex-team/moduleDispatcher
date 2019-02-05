@@ -69,12 +69,12 @@ class Module {
  * @property {Object} Library    - global object, containing Modules to init
  * @property {Module[]} modules  - list of Modules
  */
-export default class moduleDispatcher {
+export default class ModuleDispatcher {
     /**
      * @param {Object|null} settings — settings object, optional
      * @param {Object} settings.Library — global object containing Modules
      */
-    constructor(settings) {
+    constructor(settings = {}) {
         this.Library = settings.Library || window;
 
         /**

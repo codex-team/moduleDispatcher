@@ -10,17 +10,17 @@ const webpack = require('webpack');
 /**
  * Get package params
  */
-var pkg = require('./package');
+const pkg = require('./package');
 
 /**
  * Define entry point
  */
-var entry = './src/moduleDispatcher.js';
+const entry = './src/moduleDispatcher.js';
 
 /**
  * @return {String} Bundle header with Module description
  */
-var bundleComment = require('./bundleComment.js');
+const bundleComment = require('./bundleComment.js');
 
 /**
  * Set bundle params
@@ -31,14 +31,15 @@ var bundleComment = require('./bundleComment.js');
  *                  definitions (and where aren't modules at all).
  *                  It will work with CommonJS, AMD and as global variable.
  */
-var output = {
+const output = {
   filename: pkg.main,
   library: pkg.exportModuleName,
   libraryTarget: 'umd',
+  libraryExport: 'default'
 };
 
 
-var useModule = {
+const useModule = {
   rules: [
     /**
      * Process JS files
@@ -68,7 +69,7 @@ var useModule = {
 /**
  * List of plugins to run
  */
-var plugins = [
+const plugins = [
 
   /** Minify JS and CSS */
   new webpack.optimize.UglifyJsPlugin({
@@ -91,7 +92,7 @@ var plugins = [
 /**
  * Final webpack config
  */
-var config = {
+const config = {
   entry: entry,
   output: output,
   module: useModule,
