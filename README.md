@@ -49,6 +49,8 @@ You can init multiple Modules on one node as well
 
 If your Module has settings, place them via JSON **inside** the Node with data-module.
 
+**Important:** escape settings data, so xss vulnerabilities won't ruin your code. 
+
 Don't forget to add an attribute `hidden` to the `<textarea>` tag
 ```html
 <div data-module="comments">
@@ -88,11 +90,3 @@ You can also drop a few lines to [CodeX Team's email](mailto:team@ifmo.su).
 ## License
 
 [MIT](https://github.com/codex-team/dispatcher/LICENSE)
-
-Copyright (c) 2018 CodeX Team <team@codex.so>
-
-## About CodeX Team
-
-CodeX is a new team based in ITMO University, unifying students and graduates interested in web-development, design and studying new technologies in practice.
-
-[https://codex.so](https://codex.so) 
