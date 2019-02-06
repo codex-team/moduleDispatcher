@@ -69,12 +69,12 @@ class Module {
  * @property {Object} Library    - global object, containing Modules to init
  * @property {Module[]} modules  - list of Modules
  */
-export default class moduleDispatcher {
+export default class ModuleDispatcher {
     /**
      * @param {Object|null} settings — settings object, optional
      * @param {Object} settings.Library — global object containing Modules
      */
-    constructor(settings) {
+    constructor(settings = {}) {
         this.Library = settings.Library || window;
 
         /**
@@ -170,15 +170,15 @@ export default class moduleDispatcher {
     *
     * @example
     *
-    * <module-settings hidden>
+    * <textarea name="module-settings" hidden>
     *     {
     *         // your module's settings
     *     }
-    * </module-settings>
+    * </textarea>
     *
     */
     getModuleSettings(element, index, name) {
-        let settingsNodes = element.querySelector('module-settings'),
+        let settingsNodes = element.querySelector('textarea[name="module-settings"]'),
                 settingsObject;
 
         if (!settingsNodes) {
@@ -186,10 +186,10 @@ export default class moduleDispatcher {
         }
 
         try {
-            settingsObject = settingsNodes.textContent.trim();
+            settingsObject = settingsNodes.value.trim();
             settingsObject = JSON.parse(settingsObject);
         } catch(e) {
-            console.warn(`Can not parse Module «${name}» settings bacause of: ` + e);
+            console.warn(`Can not parse Module «${name}» settings because of: ` + e);
             console.groupCollapsed(name + ' settings');
             console.log(settingsObject);
             console.groupEnd();
@@ -202,11 +202,11 @@ export default class moduleDispatcher {
          *
          * Single module, settings via object
          *
-         * <module-settings>
+         * <textarea name="module-settings" hidden>
          *     {
          *         // Comments Module settings
          *     }
-         * </module-settings>
+         * </textarea>
          */
         if (!Array.isArray(settingsObject)) {
             if (index === 0) {
@@ -222,7 +222,7 @@ export default class moduleDispatcher {
          *
          * Several modules, settings via array
          *
-         * <module-settings>
+         * <textarea name="module-settings" hidden>
          *   [
          *     {
          *         // Module 1 settings
@@ -232,7 +232,7 @@ export default class moduleDispatcher {
          *     },
          *     ...
          *   ]
-         * </module-settings>
+         * </textarea>
          */
         if (settingsObject[index]) {
             return settingsObject[index];

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module Dispatcher example</title>
+</head>
+<body>
+    <div data-module="Greeter">
+        <textarea name="module-settings" hidden>
+            {
+                "name" : "Vasya"
+            }
+        </textarea>
+    Open console to see Dispatcher's work result
+    </div>
+    <script src="lib/moduleDispatcher.js"></script>
+    <script>
+        Greeter = function() {
+            const init = function(settings) {
+                console.log(`Hello, ${settings.name} 👋`);
+            };
+
+            return {
+                init
+            }
+        }();
+
+        /**
+         * Create Dispatcher instance
+         */
+        new ModuleDispatcher();
+    </script>
+</body>
+</html>
