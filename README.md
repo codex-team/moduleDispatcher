@@ -1,10 +1,11 @@
-# CodeX Module Dispatcher
+# Module Dispatcher
 
 Class for frontend Modules initialization from the DOM without inline scripts. Calls Modules **init()** method
 
 ## Installation
 
 Install npm package
+
 ```
 npm i module-dispatcher --save
 ```
@@ -12,6 +13,7 @@ npm i module-dispatcher --save
 ## Usage
 
 Import it in your JavaScript file
+
 ```js
 import ModuleDispatcher from 'module-dispatcher';
 ```
@@ -25,22 +27,27 @@ If your JavaScript Modules are parts of one global `Library` object, like
 - YourLibrary.moduleThree
 
 You can instantiate Dispatcher by the following way
+
 ```js
 new moduleDispatcher({
     Library : YourLibrary
 });
 ```
+
 If you don't specify Library, your Modules will be called as `window.moduleOne` by default.
 
 ### Add Modules to the DOM
 
 Add attribute ```data-module="yourModuleName"``` to the HTML Element of the Module you want to init.
+
 ```html
 <div data-module="comments">
     <!-- Any stuff -->
 </div>
 ```
+
 You can init multiple Modules on one node as well
+
 ```html
 <div data-module="comments likes"></div>
 ```
@@ -49,20 +56,30 @@ You can init multiple Modules on one node as well
 
 If your Module has settings, place them via JSON **inside** the Node with data-module.
 
-**Important:** escape settings data, so xss vulnerabilities won't ruin your code. 
+> ❗️Important
+>
+> You **should escape** module settings data because textarea will try to process HTML special chars.
+>
+> For `&lt;` you will get `<` in the textarea. That is not good.
+> 
+> You need to escape this string so `&` will be `&amp;`. This way `&lt;` will be `&amp;lt;` in raw HTML. Textarea will show and return `&lt;`. 
 
-Don't forget to add an attribute `hidden` to the `<textarea>` tag
+
+Don't forget to add an attribute `hidden` to the `<textarea>` tag:
+
 ```html
 <div data-module="comments">
     <textarea name="module-settings" hidden>
          {
-             // your module's settings
+             // your module's settings ESCAPED by smth like PHP's htmlspecialchars()
          }
     </textarea>
     <!-- Other stuff -->
 </div>
 ```
+
 For several Modules on one node, your settings should be an Array
+
 ```html
 <div data-module="module1 module2">
     <textarea name="module-settings" hidden>
